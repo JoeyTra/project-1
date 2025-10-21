@@ -1,0 +1,349 @@
+/* RESET + BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo left, right container right */
+  align-items: stretch;           /* Stretch nav-right vertically */
+  padding: 10px 20px;
+  height: 150px;                  /* Adjust navbar height */
+  background-color: #f0792A;
+}
+
+/* Logo styling */
+.logo img {
+  height: 120px;
+  width: auto;
+  align-self: center;             /* Vertically center logo */
+}
+
+/* Right side container */
+.nav-right {
+  display: flex;
+  flex-direction: column;  /* Stack top-buttons and bottom-buttons vertically */
+  align-items: flex-end;   /* Align buttons to the right */
+  height: 100%;
+}
+
+/* Spacer to push bottom-buttons toward center */
+.spacer {
+  flex-grow: 1;  /* Fills vertical space */
+}
+
+/* Top buttons row styling */
+.top-buttons button {
+  padding: 12px 20px;
+  margin-right: 10px;
+  background-color: #ffffff;  /* Orange */
+  color: rgb(0, 0, 0);
+  font-weight: normal;
+  font-size:small;
+  border-radius: 8px;
+  border: none;
+}
+
+.top-buttons button:hover {
+  background-color: #ffef45;
+}
+
+/* Bottom buttons row styling */
+.bottom-buttons button {
+  margin-right: 50px;
+  padding: 20px 30px;
+  background-color: #f0792A;  /* Blue */
+  color: #ffffff;
+  font-weight:bolder;
+  font-size:x-large;
+  border-radius: 8px;
+  border: none;
+}
+
+.bottom-buttons button:hover {
+  background-color: #ffef45;
+  color: rgb(0, 0, 0);
+}
+
+/* 2. HERO */
+.hero {
+    width:100%;
+    height:75vh;
+    background-image: url(Hero.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+
+.hero-content {
+    background-color: #f0792acb;
+    padding: 40px 40px;
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align:start;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.subheadline {
+    justify-self: start;
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+
+}
+
+/* BUTTON */
+.BigButton {
+    position:absolute;
+    font-size: 1.5rem;
+    background: #ffef45;
+    color: #000000;
+    text-decoration: none;
+    padding: 2rem 3.5rem;
+    border-radius: 4px;
+    transition: background .3s ease, transform .25s ease;
+    right: 20px;
+    bottom: 70px;
+}
+
+.BigButton:hover,
+.BigButton:focus {
+    background: #f0792A;
+    transform: translateY(-4px);
+}
+
+.BigButton:active {
+    transform: translateY(0);
+}
+
+/* 2. SEARCH PART */
+.search-part {
+  padding: 60px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.search-title {
+color: #f0792A;
+font-size: 2rem;
+font-weight: bold;
+text-align: center;
+margin-bottom: 40px; 
+}
+
+.search-box input[type="text"] {
+  width: 300px;
+  padding: 10px 15px;
+  border: 2px solid #f0792A;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box input[type="text"]::placeholder {
+  color: #888787;
+}
+
+/* 4. THREE FEATURES */
+.features-section {
+  padding: 60px 20px;
+  background-color: #ffdac5;
+}
+
+.section-title {
+color: #f0792A;
+font-size: 2rem;
+font-weight: bold;
+text-align: center;
+margin-bottom: 40px;               
+}
+
+/* Features layout */
+.all-features {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;   /* aligns top edges */
+  gap: 30px;                 /* spacing between cards */
+}
+
+/* Feature card */
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 360px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  color: #f0792A;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 5. GALLERY SECTION */
+.gallery-section {
+  padding: 60px;
+  background-color: #ffffff;
+}
+
+/* Heading */
+.gallery-title {
+  color: #f0792A;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 images per row */
+  gap: 30px; /* spacing between images */
+}
+
+/* Each gallery item */
+.gallery-item {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item p {
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #f0792A;
+  font-weight: 700;
+}
+
+/* Hover effect */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 6. FOOTER  */
+
+/* Footer styles */
+.footer {
+  background-color: #f0792A;
+  color: white;
+  padding: 30px 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Left side (logo) */
+.footer-left .logo {
+  height: 150px;
+}
+
+/* Right side */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+/* Subscription heading */
+.subscribe-heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Subscription box */
+.subscribe-box {
+  display: flex;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.subscribe-box input {
+  border: none;
+  padding: 15px 15px;
+  outline: none;
+  width: 240px;
+  color: #333;
+}
+
+
+/* Headings */
+.footer-headings {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-headings h6 {
+  font-size: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    align-items: center;
+  }
+
+  .footer-headings {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
